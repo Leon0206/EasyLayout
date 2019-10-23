@@ -1,0 +1,22 @@
+{
+  "name": "EasyLayout",
+  "version": "0.1.0",
+  "summary": "A short description of EasyLayout.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/leon0206/EasyLayout",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "leon0206": "634376133@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/leon0206/EasyLayout.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EasyLayout/Classes/**/*"
+}

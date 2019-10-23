@@ -1,0 +1,6 @@
+use_frameworks!
+target 'EasyLayout_Tests' do
+  pod 'EasyLayout', :path => '../'
+  
+  
+end
