@@ -1,0 +1,6 @@
+framework module EasyLayout {
+  umbrella header "EasyLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}

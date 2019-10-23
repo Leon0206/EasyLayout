@@ -1,9 +1,15 @@
 #!/bin/bash
+param=$1
 git status
-sleep 2
+sleep 1
 echo "-------Begin-------"
 git add .
-git commit -am "自动化代码提交"
+if [ "$param" = "" ]; then
+    git commit -am  "SH:自动化代码提交"
+else
+    git commit -am  "SH:"$param
+fi
+
 git push origin master
 
 git fetch

@@ -1,6 +1,13 @@
 use_frameworks!
-target 'EasyLayout_Tests' do
+
+platform :ios, '8.0'
+
+target 'EasyLayout_Example' do
   pod 'EasyLayout', :path => '../'
-  
-  
+
+  target 'EasyLayout_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
 end

@@ -1,8 +1,18 @@
 PODS:
   - EasyLayout (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
 
 DEPENDENCIES:
   - EasyLayout (from `../`)
+  - FBSnapshotTestCase
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
   EasyLayout:
@@ -10,7 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   EasyLayout: 17d967f02d5aca03fb04ae4c63e9e42591aac416
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
-PODFILE CHECKSUM: ef0866b18e3df849917f6143ed3e5f93abf406f9
+PODFILE CHECKSUM: b829830f8ff67bfb19eeef8f4b81d61e3fbda600
 
 COCOAPODS: 1.7.5
