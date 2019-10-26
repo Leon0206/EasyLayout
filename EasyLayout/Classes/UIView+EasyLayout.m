@@ -1,13 +1,13 @@
 //
-//  UIView+XYEasyLayout.m
-//  XYEasyLayout
+//  UIView+EasyLayout.m
+//  EasyLayout
 //
 //  Created by lizitao on 2018/6/21.
 //
 
-#import "UIView+XYEasyLayout.h"
+#import "UIView+EasyLayout.h"
 
-@implementation UIView (XYEasyLayout)
+@implementation UIView (EasyLayout)
 
 - (CGFloat)left
 {
@@ -227,14 +227,6 @@
     ? self.viewWidth : self.viewHeight;
 }
 
-- (UIEdgeInsets)xySafeAreaInsets
-{
-    if (@available(iOS 11.0, *)) {
-        return self.safeAreaInsets;
-    } else {
-        return UIEdgeInsetsMake(0, 0, 0, 0);
-    }
-}
 
 - (CGSize)resizeWithWidth:(CGFloat)width
 {
@@ -260,11 +252,6 @@
         y += view.top;
     }
     return CGPointMake(x, y);
-}
-
-+ (CGFloat)xyStatusBarHeight
-{
-    return [[UIApplication sharedApplication] statusBarFrame].size.height;
 }
 
 -(void)setRotation:(CGFloat)rotation

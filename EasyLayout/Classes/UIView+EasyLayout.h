@@ -1,6 +1,6 @@
 //
-//  UIView+XYEasyLayout.h
-//  XYEasyLayout
+//  UIView+EasyLayout.h
+//  EasyLayout
 //
 //  Created by lizitao on 2018/6/21.
 //
@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UIView (XYEasyLayout)
+@interface UIView (EasyLayout)
 /**
  * Shortcut for frame.origin.x.
  *
@@ -112,10 +112,6 @@
  */
 @property (nonatomic, readonly) CGFloat orientationHeight;
 /**
- * 用于适配iPhoneX，safeAreaInsets反映了安全区域距离屏幕的边距，非iPhoneX设备返回的就是UIEdgeInsetsMake(0, 0, 0, 0)
- */
-@property (nonatomic, readonly) UIEdgeInsets xySafeAreaInsets;
-/**
  *等比例按照宽度重新设定size
  */
 -(CGSize)resizeWithWidth:(CGFloat)width;
@@ -130,10 +126,6 @@
  * otherView should be a parent view of this view.
  */
 - (CGPoint)offsetFromView:(UIView*)otherView;
-/**
- * 获取系统状态栏高度
- */
-+ (CGFloat)xyStatusBarHeight;
 /**
  * set Rotation
  */
