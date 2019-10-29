@@ -39,11 +39,6 @@ for((k=0;k<100;k++)) do
     fi
 done;
 
-echo "开始二进制打包...："$latestTag
-sh package_framework.sh $latestTag
-echo "二进制文件目录:Framework/"$latestTag"/"
-git commit -am  "SH:自动化二进制打包提交"
-
 echo "自动升级tag为："$latestTag
 git tag $latestTag
 git push -v origin refs/tags/$latestTag

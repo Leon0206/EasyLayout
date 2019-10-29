@@ -43,3 +43,5 @@ podName=${packageDIR##*/}
 version=$1
 
 package_framework $podName $version
+
+./submitHelp.sh
