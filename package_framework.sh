@@ -48,4 +48,4 @@ echo "开始准备提交和发步："
 
 sleep 2
 
-./submitHelper/sh
+sh submitHelper.sh
