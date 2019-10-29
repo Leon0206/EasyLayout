@@ -46,11 +46,4 @@ sleep 3
 echo "自动发版到MDSpecs"
 ./publishHelper.sh
 
-echo "/n/n/n"
-
-sleep 3
-
-echo "开始二进制打包..."
-
-sh package_framework.sh
 echo "--------End--------"
