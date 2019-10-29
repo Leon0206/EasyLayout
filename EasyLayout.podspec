@@ -37,8 +37,33 @@ TODO: Add long description of the pod here.
   
   s.preserve_paths = "#{s.name}/Classes/**/*","Framework/**/*", "#{s.name}/Assets/**/*",
 
- 
-  s.vendored_frameworks = "Framework/#{s.version}/*.framework"
+  $use_binary = nil
+
+  $use_binary = ENV['use_binary']
+  $pod_use_binary = ENV["#{s.name}_use_binary"]
+
+  if $pod_use_binary =='1'
+    $use_binary = true
+  elsif $pod_use_binary =='0'
+    $use_binary = false
+  else
+    if $use_binary == '1'
+      $use_binary = true
+    end
+  end
+
+  tag = `git describe --abbrev=0 --tags 2>/dev/null`.strip
+  if tag && !tag.empty?
+    $use_binary =true
+  end
+
+  if $use_binary ==true
+    s.vendored_frameworks = "Framework/#{s.version}/*.framework"
+  else
+    s.source_files = "#{s.name}/Classes/**/*"
+  end
+  
+
   
 
 end
