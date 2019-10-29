@@ -58,7 +58,7 @@ TODO: Add long description of the pod here.
   end
 
   if $use_binary ==true
-    s.vendored_frameworks = "Framework/#{s.version}/*.framework"
+    s.vendored_frameworks = "Framework/*.framework"
   else
     s.source_files = "#{s.name}/Classes/**/*"
   end

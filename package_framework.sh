@@ -40,8 +40,12 @@ packageDIR=`pwd`
 
 podName=${packageDIR##*/}
 
-version=$1
+version=`git describe --abbrev=0 --tags 2>/dev/null`
 
 package_framework $podName $version
 
-./submitHelp.sh
+echo "开始准备提交和发步："
+
+sleep 2
+
+./submitHelper/sh
