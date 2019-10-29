@@ -36,11 +36,33 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'EasyLayout/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'EasyLayout' => ['EasyLayout/Assets/*.png']
-  # }
+  s.preserve_paths = "#{s.name}/Classes/**/*","Framework/**/*", "#{s.name}/Assets/**/*",
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  $source = ENV['use_source']
+  $source_name = ENV["#{s.name}_use_source"]
+
+  $use_source=nil
+  if $source_name=='1'
+    $use_source = true
+  elsif $source_name=='0'
+    $use_source = false
+  else
+    if $source == '1'
+      $use_source = true
+    end
+  end
+
+  tag = `git describe --abbrev=0 --tags 2>/dev/null`.strip
+  if tag && !tag.empty?
+    $use_source=true
+  end
+
+  if $use_source==true
+    # ！！！！！！源码方式，需要加载哪些代码和资源，请在这里做相应变更
+    s.source_files = "#{s.name}/Classes/**/*"
+  else
+    # ！！！！！！以下为固定写法，理论上不要动它
+    s.vendored_frameworks = "Framework/#{s.version}/*.framework"
+  end
+
 end
