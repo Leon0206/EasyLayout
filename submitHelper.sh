@@ -40,7 +40,7 @@ for((k=0;k<100;k++)) do
 done;
 
 echo "开始二进制打包...："$latestTag
-./package_framework.sh $latestTag
+sh package_framework.sh $latestTag
 echo "二进制文件目录:Framework/"$latestTag"/"
 git commit -am  "SH:自动化二进制打包提交"
 
